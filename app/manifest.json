@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+
+	"name": "Specs",
+	"description": "An extension that generates designspecification from code. By Codebook",
+	"version": "0.1",
+
+	"browser_action": {
+		"default_icon": "assets/icon.png"
+	},
+	
+	"background": {
+		"scripts": ["app.js"],
+		"persistent": false
+	},
+	
+	"content_scripts": [
+		{
+			"matches": ["http://*/*"],
+			"css": ["css/app.css"]
+		}
+	],
+
+	"permissions": ["<all_urls>"]
+}
